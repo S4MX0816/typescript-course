@@ -1,19 +1,5 @@
-function add(n1, n2, showResult, phrase) {
-    //   if (typeof n1 !== "number" || typeof n2 !== "number") {
-    //     throw new Error("Incorrect input!");
-    //   }
-    var res = n1 + n2;
-    if (showResult) {
-        console.log(phrase + res);
-    }
-    else {
-        return res;
-    }
-}
-var number1;
-number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "Result is: ";
-// resultPhrase = 0;
-add(number1, number2, printResult, resultPhrase);
+var person = {
+    name: "Sanyam",
+    age: 25,
+};
+console.log(person.name);
