@@ -6,13 +6,17 @@ var person = {
     name: "Sanyam",
     age: 25,
     hobbies: ["Music", "Movies"],
+    role: [2, "Author"],
 };
+person.role.push("admin");
+person.role[1] = 10;
 var favoriteActivities;
 favoriteActivities = ["Sports"];
 console.log(person.name);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     var hobby = _a[_i];
     console.log(hobby.toUpperCase());
+    //   hobby.map();
 }
 // const product: {
 //   id: string;
