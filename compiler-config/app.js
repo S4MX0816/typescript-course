@@ -1,4 +1,3 @@
-const userName = "Sam";
+var userName = "Sam";
 userName = 3;
-
 console.log(userName);
