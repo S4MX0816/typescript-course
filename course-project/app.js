@@ -1,62 +1,14 @@
-// const person: {
-//   name: string;
-//   age: number;
-// };
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string];
-// } = {
-//   name: "Sanyam",
-//   age: 25,
-//   hobbies: ["Music", "Movies"],
-//   role: [2, "Author"],
-// };
-// person.role.push("admin");
-// person.role[1] = 10;
-// person.role = [0, "admin", ""];
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
-var Role;
-(function (Role) {
-    Role["ADMIN"] = "ADMIN";
-    Role[Role["READ_ONLY"] = 100] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 200] = "AUTHOR";
-})(Role || (Role = {}));
-var person = {
-    name: "Sanyam",
-    age: 25,
-    hobbies: ["Music", "Movies"],
-    role: Role.ADMIN,
-};
-var favoriteActivities;
-favoriteActivities = ["Sports"];
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
-    //   hobby.map();
+function add(input1, input2) {
+    var res;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        res = input1 + input2;
+    }
+    else {
+        res = input1.toString() + input2.toString();
+    }
+    return res;
 }
-if (person.role === Role.ADMIN) {
-    console.log("is Admin");
-}
-// const product: {
-//   id: string;
-//   price: number;
-//   tags: string[];
-//   details: {
-//     title: string;
-//     description: string;
-//   };
-// };
-var product = {
-    id: "abc1",
-    price: 12.99,
-    tags: ["great-offer", "hot-and-new"],
-    details: {
-        title: "Red Carpet",
-        description: "A great carpet - almost brand-new!",
-    },
-};
+var combinedAges = add(30, 26);
+console.log(combinedAges);
+var combinedNames = add("Sam", "Nfs");
+console.log(combinedNames);

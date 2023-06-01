@@ -1,70 +1,15 @@
-// const person: {
-//   name: string;
-//   age: number;
-// };
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string];
-// } = {
-//   name: "Sanyam",
-//   age: 25,
-//   hobbies: ["Music", "Movies"],
-//   role: [2, "Author"],
-// };
-
-// person.role.push("admin");
-// person.role[1] = 10;
-// person.role = [0, "admin", ""];
-
-// const ADMIN = 0;
-// const READ_ONLY = 1;
-// const AUTHOR = 2;
-
-enum Role {
-  ADMIN = "ADMIN",
-  READ_ONLY = 100,
-  AUTHOR = 200,
+function add(input1: number | string, input2: number | string) {
+  let res;
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    res = input1 + input2;
+  } else {
+    res = input1.toString() + input2.toString();
+  }
+  return res;
 }
 
-const person = {
-  name: "Sanyam",
-  age: 25,
-  hobbies: ["Music", "Movies"],
-  role: Role.ADMIN,
-};
+const combinedAges = add(30, 26);
+console.log(combinedAges);
 
-let favoriteActivities: any[];
-favoriteActivities = ["Sports"];
-
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-  //   hobby.map();
-}
-
-if (person.role === Role.ADMIN) {
-  console.log("is Admin");
-}
-
-// const product: {
-//   id: string;
-//   price: number;
-//   tags: string[];
-//   details: {
-//     title: string;
-//     description: string;
-//   };
-// };
-
-const product = {
-  id: "abc1",
-  price: 12.99,
-  tags: ["great-offer", "hot-and-new"],
-  details: {
-    title: "Red Carpet",
-    description: "A great carpet - almost brand-new!",
-  },
-};
+const combinedNames = add("Sam", "Nfs");
+console.log(combinedNames);
