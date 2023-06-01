@@ -1,15 +1,15 @@
 {
-  "name": "core-types",
+  "name": "compiler-config",
   "version": "1.0.0",
-  "description": "Understanding TypeScript - Core Types",
-  "main": "app.js",
+  "description": "Understanding TypeScript - Compiler Configs",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
   "author": "Sanyam Trehan",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "lite-server": "^2.6.1"
   }
 }
