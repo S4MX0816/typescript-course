@@ -17,8 +17,5 @@ function clickHandler(
 
 // A comment
 if (button) {
-  button.addEventListener(
-    "click",
-    clickHandler.bind(null, "You're welcome", 2)
-  );
+  button.addEventListener("click", clickHandler.bind(null, "You're welcome"));
 }
