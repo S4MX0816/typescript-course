@@ -1,6 +1,6 @@
-const button = document.querySelector("button");
+const button = document.querySelector("button")!;
 
 // A comment
-button!.addEventListener("click", () => {
+button.addEventListener("click", () => {
   console.log("click");
 });
