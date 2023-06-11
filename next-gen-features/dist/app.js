@@ -24,3 +24,6 @@ const button = document.querySelector("button");
 button === null || button === void 0 ? void 0 : button.addEventListener("click", (event) => {
     console.log(event);
 });
+/////////////// DEFAULT FUNCTION PARAMETERS
+const addV3 = (a, b = 1) => a + b;
+console.log(addV3(5));

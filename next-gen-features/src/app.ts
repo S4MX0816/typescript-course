@@ -33,3 +33,8 @@ const button = document.querySelector("button");
 button?.addEventListener("click", (event) => {
   console.log(event);
 });
+
+/////////////// DEFAULT FUNCTION PARAMETERS
+
+const addV3 = (a: number, b = 1) => a + b;
+console.log(addV3(5));
