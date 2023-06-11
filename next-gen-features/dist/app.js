@@ -42,3 +42,8 @@ const addV4 = (...numbers) => {
     return numbers.reduce((curResult, curValue) => curResult + curValue, 0);
 };
 console.log(addV4(5, 10, 2, 3.7));
+/////////////// DESTRUCTURING
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobbies, hobby1, hobby2, remainingHobbies);
+const { name: nameV2, age: ageV2 } = person;
+console.log(person, nameV2, ageV2);
