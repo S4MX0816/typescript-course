@@ -27,3 +27,13 @@ button === null || button === void 0 ? void 0 : button.addEventListener("click",
 /////////////// DEFAULT FUNCTION PARAMETERS
 const addV3 = (a, b = 1) => a + b;
 console.log(addV3(5));
+/////////////// SPREAD OPERATOR
+const hobbies = ["Music", "Coding"];
+const activeHobbies = ["Hiking", ...hobbies];
+activeHobbies.push(...hobbies);
+console.log(activeHobbies);
+const person = {
+    name: "Sanyam",
+    age: 25,
+};
+const copiedPerson = Object.assign({}, person);

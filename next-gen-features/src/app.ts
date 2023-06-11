@@ -38,3 +38,18 @@ button?.addEventListener("click", (event) => {
 
 const addV3 = (a: number, b = 1) => a + b;
 console.log(addV3(5));
+
+/////////////// SPREAD OPERATOR
+
+const hobbies = ["Music", "Coding"];
+const activeHobbies = ["Hiking", ...hobbies];
+
+activeHobbies.push(...hobbies);
+console.log(activeHobbies);
+
+const person = {
+  name: "Sanyam",
+  age: 25,
+};
+
+const copiedPerson = { ...person };
