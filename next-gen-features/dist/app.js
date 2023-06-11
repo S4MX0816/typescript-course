@@ -37,3 +37,8 @@ const person = {
     age: 25,
 };
 const copiedPerson = Object.assign({}, person);
+/////////////// REST PARAMETERS
+const addV4 = (...numbers) => {
+    return numbers.reduce((curResult, curValue) => curResult + curValue, 0);
+};
+console.log(addV4(5, 10, 2, 3.7));
