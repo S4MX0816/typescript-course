@@ -23,7 +23,11 @@ var Department = /** @class */ (function () {
         this.employees = [];
         // this.id = id;
         // this.name = n;
+        console.log(Department.fiscalYear);
     }
+    Department.createEmployee = function (name) {
+        return { name: name };
+    };
     Department.prototype.describe = function () {
         console.log("Department (".concat(this.id, "):  ").concat(this.name));
     };
@@ -35,6 +39,7 @@ var Department = /** @class */ (function () {
         console.log(this.employees.length);
         console.log(this.employees);
     };
+    Department.fiscalYear = 2023;
     return Department;
 }());
 var ITDepartment = /** @class */ (function (_super) {
@@ -108,3 +113,5 @@ accounting.printEmployeeInformation();
 // accounting.mostRecentReport = "";
 accounting.mostRecentReport = "Year end report";
 accounting.getReports();
+var employee1 = Department.createEmployee("Raghav");
+console.log(employee1, Department.fiscalYear);
