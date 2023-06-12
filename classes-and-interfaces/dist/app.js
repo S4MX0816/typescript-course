@@ -55,6 +55,12 @@ var AccountingDepartment = /** @class */ (function (_super) {
         _this.reports = reports;
         return _this;
     }
+    AccountingDepartment.prototype.addEmployee = function (employee) {
+        if (employee === "Harsh") {
+            return;
+        }
+        this.employees.push(employee);
+    };
     AccountingDepartment.prototype.addReport = function (report) {
         this.reports.push(report);
     };
@@ -76,3 +82,6 @@ var accounting = new AccountingDepartment("d2", []);
 accounting.addReport("Something went wrong...");
 accounting.getReports();
 console.log(accounting);
+accounting.addEmployee("Harsh");
+accounting.addEmployee("Kushager");
+accounting.printEmployeeInformation();
