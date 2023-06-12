@@ -68,3 +68,8 @@ const userInputElement = document.getElementById("user-input");
 if (userInputElement) {
     userInputElement.value = "Hi There!";
 }
+const errorBag = {
+    email: "Not a valid email",
+    userName: "Must start with a capital character",
+};
+console.log(errorBag);

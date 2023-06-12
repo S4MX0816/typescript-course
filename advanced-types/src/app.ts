@@ -119,3 +119,17 @@ const userInputElement = document.getElementById("user-input");
 if (userInputElement) {
   (userInputElement as HTMLInputElement).value = "Hi There!";
 }
+
+//////////////////// INDEX PROPERTIES
+
+// {email: 'Not a valid email', userName: 'Must start with a capital character'}
+interface ErrorContainer {
+  [prop: string]: string;
+}
+
+const errorBag: ErrorContainer = {
+  email: "Not a valid email",
+  userName: "Must start with a capital character",
+};
+
+console.log(errorBag);
