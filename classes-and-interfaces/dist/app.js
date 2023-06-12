@@ -2,10 +2,17 @@
 var Person = /** @class */ (function () {
     function Person(n) {
         this.age = 25;
-        this.name = n;
+        if (n) {
+            this.name = n;
+        }
     }
     Person.prototype.greet = function (phrase) {
-        console.log(phrase + " " + this.name);
+        if (this.name) {
+            console.log(phrase + " " + this.name);
+        }
+        else {
+            console.log(phrase);
+        }
     };
     return Person;
 }());
@@ -18,3 +25,5 @@ add = function (n1, n2) {
     return n1 + n2;
 };
 console.log(add(1, 3));
+var user2 = new Person();
+user2.greet("No name");
