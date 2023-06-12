@@ -73,3 +73,11 @@ const errorBag = {
     userName: "Must start with a capital character",
 };
 console.log(errorBag);
+function addV2(a, b) {
+    if (typeof a === "string" || typeof b === "string") {
+        return a.toString() + b.toString();
+    }
+    return a + b;
+}
+const result = addV2(1, "5");
+result.split(" ");

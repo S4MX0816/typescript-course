@@ -133,3 +133,19 @@ const errorBag: ErrorContainer = {
 };
 
 console.log(errorBag);
+
+//////////////////// FUNCTION OVERLOADS
+
+function addV2(a: number, b: number): number;
+function addV2(a: string, b: string): string;
+function addV2(a: string, b: number): string;
+function addV2(a: number, b: string): string;
+function addV2(a: Combinable, b: Combinable) {
+  if (typeof a === "string" || typeof b === "string") {
+    return a.toString() + b.toString();
+  }
+  return a + b;
+}
+
+const result = addV2(1, "5");
+result.split(" ");
