@@ -13,6 +13,7 @@ var Department = /** @class */ (function () {
         console.log("Department (".concat(this.id, "):  ").concat(this.name));
     };
     Department.prototype.addEmployee = function (employee) {
+        // this.id = "d2";
         this.employees.push(employee);
     };
     Department.prototype.printEmployeeInformation = function () {
