@@ -1,5 +1,6 @@
 "use strict";
 //////////////////// INTERSECTION TYPES
+var _a;
 const e1 = {
     name: "Sanyam",
     privileges: ["create-server"],
@@ -81,3 +82,10 @@ function addV2(a, b) {
 }
 const result = addV2(1, "5");
 result.split(" ");
+//////////////////// OPTIONAL CHAINING
+const fetchData = {
+    id: "u1",
+    name: "Sanyam",
+    job: { title: "CEO", description: "OHRA Productions" },
+};
+console.log((_a = fetchData === null || fetchData === void 0 ? void 0 : fetchData.job) === null || _a === void 0 ? void 0 : _a.title);

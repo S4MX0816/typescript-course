@@ -149,3 +149,13 @@ function addV2(a: Combinable, b: Combinable) {
 
 const result = addV2(1, "5");
 result.split(" ");
+
+//////////////////// OPTIONAL CHAINING
+
+const fetchData = {
+  id: "u1",
+  name: "Sanyam",
+  job: { title: "CEO", description: "OHRA Productions" },
+};
+
+console.log(fetchData?.job?.title);
