@@ -28,9 +28,6 @@ var Department = /** @class */ (function () {
     Department.createEmployee = function (name) {
         return { name: name };
     };
-    Department.prototype.describe = function () {
-        console.log("Department (".concat(this.id, "):  ").concat(this.name));
-    };
     Department.prototype.addEmployee = function (employee) {
         // this.id = "d2";
         this.employees.push(employee);
@@ -51,6 +48,9 @@ var ITDepartment = /** @class */ (function (_super) {
         _this.admins = admins;
         return _this;
     }
+    ITDepartment.prototype.describe = function () {
+        console.log("`IT Department - ID:  ${this.id}`");
+    };
     return ITDepartment;
 }(Department));
 var AccountingDepartment = /** @class */ (function (_super) {
@@ -77,6 +77,9 @@ var AccountingDepartment = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    AccountingDepartment.prototype.describe = function () {
+        console.log("Accounting Department - ID:  ".concat(this.id));
+    };
     AccountingDepartment.prototype.addEmployee = function (employee) {
         if (employee === "Harsh") {
             return;
@@ -115,3 +118,5 @@ accounting.mostRecentReport = "Year end report";
 accounting.getReports();
 var employee1 = Department.createEmployee("Raghav");
 console.log(employee1, Department.fiscalYear);
+accounting.describe();
+it.describe();
