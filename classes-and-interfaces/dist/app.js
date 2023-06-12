@@ -9,6 +9,7 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var user1 = new Person("Sanyam");
+var user1;
+user1 = new Person("Sanyam");
 user1.greet("Hi there - I am");
 console.log(user1);
