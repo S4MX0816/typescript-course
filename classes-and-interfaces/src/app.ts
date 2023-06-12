@@ -1,5 +1,5 @@
 interface Greetable {
-  name: string;
+  readonly name: string;
   greet(phrase: string): void;
 }
 
@@ -21,3 +21,4 @@ let user1: Greetable;
 user1 = new Person("Sanyam");
 user1.greet("Hi there - I am");
 console.log(user1);
+// user1.name = "Harsh";

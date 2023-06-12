@@ -13,3 +13,4 @@ var user1;
 user1 = new Person("Sanyam");
 user1.greet("Hi there - I am");
 console.log(user1);
+// user1.name = "Harsh";
