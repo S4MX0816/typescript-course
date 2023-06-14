@@ -56,9 +56,13 @@ console.log(textStorage.getItems());
 const numberStorage = new DataStorage();
 numberStorage.addItem(10);
 console.log(numberStorage.getItems());
-// const objectStorage = new DataStorage<object>();
-// const harshObj = { name: "Harsh" };
-// objectStorage.addItem(harshObj);
-// objectStorage.addItem({ name: "Sanyam" });
-// objectStorage.removeItem(harshObj);
-// console.log(objectStorage.getItems());
+function createCourseGoal(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
+const namesV2 = ["Sanyam", "Naveen"];
+// namesV2.push("Harsh");
+// namesV2.pop()

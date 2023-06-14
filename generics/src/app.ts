@@ -82,3 +82,27 @@ console.log(numberStorage.getItems());
 // objectStorage.addItem({ name: "Sanyam" });
 // objectStorage.removeItem(harshObj);
 // console.log(objectStorage.getItems());
+
+//////////// GENERIC UTILITY TYPES
+
+interface CourseGoal {
+  title: string;
+  description: string;
+  completeUntil: Date;
+}
+
+function createCourseGoal(
+  title: string,
+  description: string,
+  date: Date
+): CourseGoal {
+  let courseGoal: Partial<CourseGoal> = {};
+  courseGoal.title = title;
+  courseGoal.description = description;
+  courseGoal.completeUntil = date;
+  return courseGoal as CourseGoal;
+}
+
+const namesV2: Readonly<string[]> = ["Sanyam", "Naveen"];
+// namesV2.push("Harsh");
+// namesV2.pop()
