@@ -10,3 +10,9 @@ const promise = new Promise((resolve) => {
 promise.then((data) => {
     //  data.split(" ")
 });
+//////////// CUSTOM GENERIC TYPES
+function merge(objA, objB) {
+    return Object.assign(objA, objB);
+}
+const mergeObj = merge({ name: "Sanyam" }, { age: 25 });
+console.log(mergeObj.age);

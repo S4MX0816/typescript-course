@@ -11,3 +11,12 @@ const promise: Promise<number> = new Promise((resolve) => {
 promise.then((data) => {
   //  data.split(" ")
 });
+
+//////////// CUSTOM GENERIC TYPES
+
+function merge<T extends object, U>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
+}
+
+const mergeObj = merge({ name: "Sanyam" }, { age: 25 });
+console.log(mergeObj.age);
