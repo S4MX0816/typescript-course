@@ -25,3 +25,8 @@ function countAndPrint(element) {
 }
 console.log(countAndPrint("Hello There!"));
 console.log(countAndPrint(["Sports", "Cooking"]));
+//////////// KEYOF CONSTRAINT
+function extractAndConvert(obj, key) {
+    return `Value: ${obj[key]}`;
+}
+console.log(extractAndConvert({ name: "Sanyam" }, "name"));
