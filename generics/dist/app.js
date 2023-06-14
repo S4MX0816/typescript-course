@@ -30,3 +30,35 @@ function extractAndConvert(obj, key) {
     return `Value: ${obj[key]}`;
 }
 console.log(extractAndConvert({ name: "Sanyam" }, "name"));
+//////////// GENERIC CLASSES
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        if (this.data.indexOf(item) === -1) {
+            return;
+        }
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+    getItems() {
+        return [...this.data];
+    }
+}
+const textStorage = new DataStorage();
+textStorage.addItem("Sanyam");
+textStorage.addItem("Harsh");
+textStorage.removeItem("Harsh");
+console.log(textStorage.getItems());
+const numberStorage = new DataStorage();
+numberStorage.addItem(10);
+console.log(numberStorage.getItems());
+// const objectStorage = new DataStorage<object>();
+// const harshObj = { name: "Harsh" };
+// objectStorage.addItem(harshObj);
+// objectStorage.addItem({ name: "Sanyam" });
+// objectStorage.removeItem(harshObj);
+// console.log(objectStorage.getItems());
