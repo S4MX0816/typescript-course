@@ -111,7 +111,8 @@ class ProjectItem extends Component {
         this.renderContent();
     }
     dragStartHandler(event) {
-        console.log(event);
+        event.dataTransfer.setData("text/plain", this.project.id);
+        event.dataTransfer.effectAllowed = "move";
     }
     dragEndHandler(_) {
         console.log("Drag End");
@@ -139,10 +140,16 @@ class ProjectList extends Component {
         this.renderContent();
     }
     dragOverHandler(event) {
+        if (event.dataTransfer && event.dataTransfer.types[0] === "text/plain") {
+            event.preventDefault();
+        }
         this.element.querySelector("ul").classList.add("droppable");
     }
-    dropHandler(event) { }
-    dragLeaveHandler(event) {
+    dropHandler(event) {
+        var _a;
+        console.log((_a = event.dataTransfer) === null || _a === void 0 ? void 0 : _a.getData("text/plain"));
+    }
+    dragLeaveHandler(_) {
         this.element.querySelector("ul").classList.remove("droppable");
     }
     configure() {
