@@ -1,0 +1,12 @@
+{
+  "name": "drag-and-drop-project",
+  "version": "1.0.0",
+  "description": "Understanding TypeScript - Drag and Drop Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "Sanyam Trehan",
+  "license": "ISC"
+}
